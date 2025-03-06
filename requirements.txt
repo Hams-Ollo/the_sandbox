@@ -1,0 +1,71 @@
+# Optimized Project Requirements
+
+## Core Components
+
+# Core Dependencies
+langchain==0.1.7  # Framework for building LLM-powered applications
+langgraph==0.0.25  # Graph-based orchestration for multi-agent AI workflows
+pydantic==2.5.2  # Data validation and settings management
+fastapi==0.109.0  # High-performance web framework for APIs using Python
+uvicorn==0.27.0  # ASGI server for running FastAPI applications
+
+# Frontend
+gradio==4.13.0  # Simple UI framework for AI demos and applications
+docusaurus==3.2.1  # Documentation site generator for hosting project docs
+
+# LLM Integrations
+openai==1.12.0  # OpenAI API client for GPT models
+anthropic==0.8.0  # API client for Claude models
+google-generativeai==0.3.1  # Google Gemini AI API client
+llama-cpp-python==0.2.25  # Local LLaMA model inference in Python
+transformers==4.36.2  # Hugging Face's model library for NLP
+sentence-transformers==2.2.2  # Embedding-based similarity models
+accelerate==0.25.0  # Distributed and optimized inference for large models
+bitsandbytes==0.41.3  # 8-bit quantization for LLMs to reduce memory usage
+
+# Vector Database & Knowledge Retrieval
+chromadb==0.4.22  # Lightweight vector database for retrieval-augmented generation
+pgvector==0.2.4  # PostgreSQL extension for storing and querying vector embeddings
+supabase-py==2.0.0  # Client for Supabase (PostgreSQL-based backend)
+
+# Persistent Knowledge Graph
+networkx==3.2.1  # Graph-based knowledge structuring
+neo4j==5.10.0  # Graph database for persistent knowledge graph storage
+
+# Voice AI
+whisper==1.1.0  # OpenAI's automatic speech recognition (ASR) model
+elevenlabs==0.2.26  # Text-to-speech API client for Eleven Labs
+sounddevice==0.4.6  # Python interface for sound playback/recording
+pyaudio==0.2.13  # Python bindings for PortAudio (low-level audio processing)
+speechrecognition==3.10.0  # Speech-to-text conversion
+pydub==0.25.1  # Audio processing and format conversion
+
+# Document Processing
+pandas==2.1.4  # Data manipulation and analysis
+numpy==1.26.2  # Numerical computing support
+pyarrow==14.0.1  # Apache Arrow support for optimized in-memory processing
+polars==0.19.0  # High-performance DataFrame library for big data processing
+docling==0.3.1  # Advanced document parsing and processing pipeline
+unstructured==0.12.0  # Handles various document types for NLP workflows
+
+# API Integrations
+google-api-python-client==2.108.0  # Google API client
+google-auth-oauthlib==1.0.0  # OAuth authentication for Google services
+python-dotenv==1.0.0  # Manage environment variables securely
+httpx==0.25.2  # Modern, fast HTTP client for Python
+Authlib==1.2.1  # OAuth and authentication library for secure API access
+
+# Monitoring and Observability
+langsmith==0.0.69  # Tracing and evaluation for LangChain-based AI workflows
+prometheus-client==0.19.0  # Monitoring and alerting for metrics collection
+grafana==10.1.0  # Visualization and real-time monitoring dashboards
+
+# Development and Testing
+pytest==7.4.3  # Testing framework for Python applications
+black==23.12.0  # Code formatter for consistent styling
+isort==5.13.2  # Sorting imports automatically
+ruff==0.1.5  # Fast Python linter and formatter for static code analysis
+
+# Documentation
+mkdocs==1.5.3  # Static site generator for project documentation
+mkdocs-material==9.4.14  # Material theme for MkDocs documentation
