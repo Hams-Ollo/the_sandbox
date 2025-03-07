@@ -38,27 +38,55 @@ This repository includes everything you need to start experimenting with advance
 
 ```curl
 the_sandbox/
-├── app/                           # Core application code (for your implementations)
-├── custom-knowledge-graph/        # Knowledge graph structure and content
-│   ├── alfred/                    # AI assistant knowledge components
-│   ├── batman/                    # Human operator knowledge components
-│   ├── knowledge-articles/        # Structured knowledge articles
-│   │   ├── prompt-engineering-*.md # Prompt engineering resources
-│   └── raw-data/                  # Raw data for knowledge processing
+├── src/                           # Main source code directory
+│   ├── agents/                    # Agent-related components
+│   │   ├── alfred_prime/          # Alfred Prime coordinator agent
+│   │   ├── specialized/           # Domain-specific specialized agents
+│   │   └── utils/                 # Agent utilities and helpers
+│   ├── knowledge_graph/           # Knowledge graph components
+│   │   ├── vector_db/             # Vector database integration
+│   │   ├── neo4j/                 # Neo4j graph database integration
+│   │   ├── embeddings/            # Embedding models and utilities
+│   │   ├── rag/                   # Retrieval-augmented generation
+│   │   ├── knowledge-articles/    # Structured knowledge articles
+│   │   └── raw-data/              # Raw data for knowledge processing
+│   ├── tools/                     # External tool integrations
+│   │   ├── api_integrations/      # External API connectors
+│   │   ├── voice/                 # Voice processing utilities
+│   │   └── document_processing/   # Document handling tools
+│   ├── ui/                        # User interface components
+│   │   ├── gradio/                # Gradio-based web interface
+│   │   ├── components/            # Reusable UI components
+│   │   └── templates/             # UI templates
+│   ├── core/                      # Core system components
+│   │   ├── orchestration/         # Workflow orchestration
+│   │   ├── auth/                  # Authentication and security
+│   │   └── monitoring/            # System monitoring and logging
+│   ├── config/                    # Configuration management
+│   │   ├── env/                   # Environment configurations
+│   │   └── prompts/               # Prompt templates
+│   ├── workflows/                 # Workflow definitions
+│   │   ├── templates/             # Workflow templates
+│   │   └── examples/              # Example workflows
+│   ├── tests/                     # Test suite
+│   │   ├── unit/                  # Unit tests
+│   │   ├── integration/           # Integration tests
+│   │   └── fixtures/              # Test fixtures
+│   └── main.py                    # Main application entry point
 ├── docs/                          # Documentation and guides
-│   ├── batman_and_alfred_framework.md  # Framework overview
-│   ├── prompt-engineering-*.md    # Prompt engineering resources
-│   └── technical/                 # Technical documentation
+│   ├── revised-batman-prompt.md   # Batman & Alfred Framework specification
+│   └── prompt-engineering-report.md # Prompt engineering resources
+├── proj-work-notes.md             # Project work notes and progress tracking
 └── requirements.txt               # Project dependencies
 ```
 
 ### 🛠️ Core Features
 
-- 📊 **Custom Knowledge Graph Framework**: Structure for building personalized knowledge repositories
-- 💬 **Advanced Prompt Engineering**: Techniques and templates for effective AI interaction
-- 🎭 **Multi-Agent System Design**: Patterns for creating collaborative AI agent networks
-- 🔌 **Tool-Calling Integration**: Methods for connecting AI systems with external tools and APIs
-- 🔬 **Human-Centered AI Design**: Templates that optimize for human agency and cognitive enhancement
+- 🤖 **Multi-Agent Orchestration**: Alfred Prime coordinates specialized agents for complex tasks
+- 📊 **Custom Knowledge Graph Framework**: Neo4j and vector database integration for knowledge management
+- 🔌 **Tool-Calling Integration**: Registry for connecting AI systems with external tools and APIs
+- 🌐 **Gradio-based UI**: Conversational and voice interface for human-AI interaction
+- 🧩 **Modular Architecture**: Clear separation of concerns for extensibility and maintainability
 
 ## 🚶‍♂️ Getting Started: Your First Steps
 
@@ -86,7 +114,19 @@ the_sandbox/
    # Edit .env with your API keys
    ```
 
-### Step 2: Define Your Batman Profile 🦇
+### Step 2: Explore the Project Structure 🗺️
+
+The Sandbox uses a modular architecture organized around the Batman & Alfred Framework:
+
+1. 🤵 **Alfred Prime**: The coordinator agent that orchestrates workflows
+2. 🦸 **Specialized Agents**: Domain-specific agents for various tasks
+3. 📚 **Knowledge Graph**: Neo4j and vector database for knowledge management
+4. 🔧 **Tools**: External API integrations and utilities
+5. 🖥️ **UI**: Gradio-based interface for interaction
+
+Explore the existing components in the `src/` directory to understand the system architecture.
+
+### Step 3: Define Your Batman Profile 🦇
 
 Begin by creating your own Batman profile—a structured definition of who you are, your mission, and your values. This forms the foundation of any AI assistant you build:
 
@@ -109,37 +149,26 @@ Begin by creating your own Batman profile—a structured definition of who you a
 - [Principles that guide your technical and business decisions]
 ```
 
-Save this profile in the `custom-knowledge-graph/batman/` directory.
-
-### Step 3: Explore the Knowledge Graph Structure 🗺️
-
-The Sandbox uses a custom knowledge graph approach to organize information:
-
-1. 🤵 **Alfred Components**: AI assistant knowledge, capabilities, and configurations
-2. 🦇 **Batman Components**: Human operator profiles, goals, and preferences
-3. 📚 **Knowledge Articles**: Structured information on various topics
-4. 📊 **Raw Data**: Unprocessed information for knowledge extraction
-
-Explore the existing knowledge articles in `custom-knowledge-graph/knowledge-articles/` to understand the prompt engineering techniques and implementation strategies.
+Save this profile in the `src/config/prompts/` directory.
 
 ### Step 4: Experiment with Prompt Engineering ✍️
 
 The Sandbox includes comprehensive resources on advanced prompt engineering:
 
-- 📘 **Fundamentals**: Core principles and techniques (`prompt-engineering-fundamentals.md`)
-- 📗 **Advanced Techniques**: Sophisticated strategies (`prompt-engineering-advanced-techniques.md`)
-- 📙 **Testing & Iteration**: Methods for refining prompts (`prompt-engineering-testing-iteration.md`)
-- 📕 **Multi-Agent Systems**: Specialized approaches for agent networks (`prompt-engineering-multiagent-systems.md`)
-- 📓 **Implementation Guide**: Practical application strategies (`prompt-engineering-implementation-guide.md`)
+- 📘 **Fundamentals**: Core principles and techniques (`docs/prompt-engineering-report.md`)
+- 📗 **Advanced Techniques**: Sophisticated strategies (`docs/prompt-engineering-report.md`)
+- 📙 **Testing & Iteration**: Methods for refining prompts (`docs/prompt-engineering-report.md`)
+- 📕 **Multi-Agent Systems**: Specialized approaches for agent networks (`docs/prompt-engineering-report.md`)
+- 📓 **Implementation Guide**: Practical application strategies (`docs/prompt-engineering-report.md`)
 
 ### Step 5: Build Your First AI System 🏗️
 
 Use the provided framework to build your first AI system:
 
-1. 🗺️ Define your knowledge graph structure
-2. 📝 Create your prompt templates
-3. 🤖 Configure your agent architecture
-4. 🔌 Implement tool-calling capabilities
+1. 🗺️ Define your knowledge graph structure using Neo4j and vector embeddings
+2. 🤖 Create specialized agents for your specific domains
+3. 🔌 Register tools for external integrations
+4. 🌐 Configure the UI for your use case
 5. 🧪 Test and refine your system
 
 ## 🌉 Bridging Technical & Wisdom Domains
@@ -196,18 +225,18 @@ The Sandbox thrives through community participation guided by these principles:
 
 ### For Beginners 🌱
 
-- 📘 `docs/batman_and_alfred_framework.md`: Overview of the core framework
-- 📗 `custom-knowledge-graph/knowledge-articles/prompt-engineering-fundamentals.md`: Introduction to prompt engineering
+- 📘 `docs/revised-batman-prompt.md`: Overview of the core framework
+- 📗 `docs/prompt-engineering-report.md`: Introduction to prompt engineering
 
 ### For Intermediate Practitioners 🌿
 
 - 📙 `docs/prompt-engineering-report.md`: Comprehensive analysis of advanced techniques
-- 📕 `custom-knowledge-graph/knowledge-articles/prompt-engineering-implementation-guide.md`: Practical implementation strategies
+- 📕 `docs/prompt-engineering-report.md`: Practical implementation strategies
 
 ### For Advanced Developers 🌳
 
-- 📚 `custom-knowledge-graph/knowledge-articles/prompt-engineering-multiagent-systems.md`: Specialized approaches for multi-agent systems
-- 📓 `docs/prompt-engineering-techniques.md`: Cutting-edge techniques for complex systems
+- 📚 `docs/prompt-engineering-report.md`: Specialized approaches for multi-agent systems
+- 📓 `docs/prompt-engineering-report.md`: Cutting-edge techniques for complex systems
 
 ## 🌱 Growing with the Community
 
