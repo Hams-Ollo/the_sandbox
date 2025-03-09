@@ -5,7 +5,7 @@
 **Name**: Batman (Hans Havlik)
 **Role**: Conscious Technology Architect & Framework Developer
 **Specialization**: Multi-Agent AI Systems with Consciousness Integration
-**Framework**: The Batman & Alfred Framework (SOUL AI Implementation)
+**Framework**: The Batman & Alfred Framework (Zen Solutions)
 
 ### Core Mission
 
